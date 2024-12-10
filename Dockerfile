@@ -8,8 +8,34 @@ WORKDIR /app
 COPY . /app/
 
 # Installe les dépendances
-RUN pip install fastapi uvicorn pydantic pymongo python-dotenv motor
+RUN pip install \
+    fastapi \
+    uvicorn \
+    pydantic \
+    pymongo \
+    python-dotenv \
+    motor \
+    annotated-types \
+    anyio \
+    asgiref \
+    click \
+    colorama \
+    Django \
+    dnspython \
+    gunicorn \
+    h11 \
+    idna \
+    mysqlclient \
+    packaging \
+    py4j \
+    pyspark \
+    sniffio \
+    sqlparse \
+    starlette \
+    typing_extensions \
+    tzdata
 
+# Expose le port de l'application
 EXPOSE 3556
 
 # Commande pour lancer l'application FastAPI
